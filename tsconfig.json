@@ -1,0 +1,43 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    // File Layout
+    "rootDir": "./src",        // เพิ่มเพื่อบอก TypeScript ว่า source อยู่ที่ src
+    "outDir": "./dist",        // เพิ่มเพื่อ build ไปที่ dist
+
+    // Environment Settings
+    "module": "CommonJS",      // เปลี่ยนจาก nodenext เป็น CommonJS สำหรับ Node
+    "target": "ES2020",        // รองรับ async/await
+    "moduleResolution": "node", // สำหรับ Node.js
+    "esModuleInterop": true,    // สำหรับ import modules สะดวก
+    "types": ["node"],          // เพิ่ม Node types
+
+    // Other Outputs
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    // Stricter Typechecking Options
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    // Style Options
+    // "noImplicitReturns": true,
+    // "noImplicitOverride": true,
+    // "noUnusedLocals": true,
+    // "noUnusedParameters": true,
+    // "noFallthroughCasesInSwitch": true,
+    // "noPropertyAccessFromIndexSignature": true,
+
+    // Recommended Options
+    "strict": true,
+    "jsx": "react-jsx",             // ยังคงไว้ เผื่อมีไฟล์ JSX
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"],         // รวมไฟล์ทั้งหมดใน src
+  "exclude": ["node_modules", "dist"]
+}
